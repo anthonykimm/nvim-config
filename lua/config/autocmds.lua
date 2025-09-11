@@ -28,3 +28,14 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 		vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#ffffff", bg = "#1e1e1e" })
 	end,
 })
+
+-- Word wrap at screen width
+vim.api.nvim_create_autocmd("FileType", {
+	callback = function()
+		vim.opt_local.wrap = true
+		vim.opt_local.linebreak = true
+		vim.opt_local.showbreak = "↪ "
+		vim.opt_local.textwidth = 0
+		vim.opt_local.wrapmargin = 0
+	end,
+})
