@@ -10,8 +10,8 @@ opt.showmode = false
 opt.termguicolors = true
 
 -- tabspace to 4 spaces
-opt.shiftwidth = 2
-opt.tabstop = 2
+opt.shiftwidth = 4
+opt.tabstop = 4
 -- spaces instead of tabs
 vim.o.expandtab = true
 opt.breakindent = true
