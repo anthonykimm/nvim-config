@@ -35,4 +35,20 @@ return {
 			})
 		end,
 	},
+	{
+		"sindrets/diffview.nvim",
+		config = function()
+			local map = vim.keymap.set
+
+			-- Toggle diff view
+			map("n", "<leader>gd", function()
+				local view = require("diffview.lib").get_current_view()
+				if view then
+					vim.cmd("DiffviewClose")
+				else
+					vim.cmd("DiffviewOpen")
+				end
+			end, { desc = "Toggle [G]it [D]iff view" })
+		end,
+	},
 }
