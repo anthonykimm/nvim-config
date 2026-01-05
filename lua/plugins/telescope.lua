@@ -3,7 +3,8 @@ return {
 	{
 		"nvim-telescope/telescope.nvim",
 		event = "VimEnter",
-		branch = "0.1.x",
+		-- TODO: can be deleted once new lazy.nvim release is available
+		version = "^0.1.9",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			{
